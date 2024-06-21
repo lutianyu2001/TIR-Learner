@@ -1,6 +1,7 @@
 import os
 import warnings
 
+os.environ["KERAS_BACKEND"] = "torch"
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = '3'  # mute all tensorflow info, warnings, and error msgs. #shujun
 os.environ["KMP_WARNINGS"] = '0'  # mute all OpenMP warnings. #shujun
 # warnings.filterwarnings("ignore", category=FutureWarning)  # mute tensorflow warnings and pyarrow warning
@@ -28,11 +29,10 @@ if True:  # noqa: E402
 
     from sklearn.preprocessing import LabelEncoder
     # Attention: sklearn does not automatically import its subpackages
-    import tensorflow as tf
+    # import tensorflow as tf
+    import torch
     import keras
-    from tensorflow.python.framework.errors_impl import InternalError
-    # from keras.utils import to_categorical
-    # from keras.models import load_model
+    # from tensorflow.python.framework.errors_impl import InternalError
 
 
 # Acceptable additional args

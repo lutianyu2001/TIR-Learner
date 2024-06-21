@@ -74,13 +74,14 @@ def predict(df_in, genome_file, path_to_model):
     d = dict(zip(target_int_encoded, l_class))
 
     print("  Step 4/7: CNN prediction")
-    try:
-        predicted_labels = model.predict(np.stack(pre_feature))
-    except InternalError as e:
-        print(e)
-        with tf.device("/cpu:0"):
-            pre_feature_tensor = tf.convert_to_tensor(np.stack(pre_feature), np.float32)
-            predicted_labels = model.predict(pre_feature_tensor)
+    # try:
+    #     predicted_labels = model.predict(np.stack(pre_feature))
+    # except InternalError as e:
+    #     print(e)
+    #     with tf.device("/cpu:0"):
+    #         pre_feature_tensor = tf.convert_to_tensor(np.stack(pre_feature), np.float32)
+    #         predicted_labels = model.predict(pre_feature_tensor)
+    predicted_labels = model.predict(np.stack(pre_feature))
 
     df["percent"] = pd.Series(predicted_labels.max(axis=-1))
     y_classes = predicted_labels.argmax(axis=-1)
