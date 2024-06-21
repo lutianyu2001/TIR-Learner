@@ -1,18 +1,23 @@
 name: tir-learner
 channels:
   - conda-forge
+  - pytorch
   - bioconda
   - defaults
 dependencies:
   - bioconda::blast=2.15.0=pl5321h6f7f691_1
   - bioconda::genericrepeatfinder=1.0.2=h4ac6f70_0
-  - bioconda::genometools-genometools=1.6.5=py312h16aaebc_2
-  - conda-forge::biopython=1.83=py312h98912ed_0
+  - bioconda::genometools-genometools=1.6.5=py311h396876e_3
+  - conda-forge::biopython=1.83=py311h459d7ec_0
   - conda-forge::glob2=0.7=py_0
   - conda-forge::keras=3.3.3=pyhd8ed1ab_0
-  - conda-forge::multiprocess=0.70.16=py312h98912ed_0
-  - conda-forge::pandas=2.2.2=py312h1d6d2e6_1
-  - conda-forge::regex=2024.5.15=py312h9a8786e_0
-  - conda-forge::scikit-learn=1.5.0=py312h1fcc3ea_1
+  - conda-forge::multiprocess=0.70.16=py311h459d7ec_0
+  - conda-forge::pandas=2.2.2=py311h14de704_1
+  - conda-forge::pytorch=2.1.2=cpu_mkl_py311h9835ca6_104
+  - conda-forge::regex=2024.5.15=py311h331c9d8_0
+  - conda-forge::scikit-learn=1.5.0=py311he08f58d_1
   - conda-forge::swifter=1.4.0=pyhd8ed1ab_0
-  - conda-forge::tensorflow=2.16.1=cpu_py312hfe0d8c0_0
+  - conda-forge::torchvision=0.16.1=cpu_py311h5d47fc7_3
+  - pytorch::cpuonly=2.0=0
+  - pytorch::pytorch-mutex=1.0=cpu
+  - pytorch::torchaudio=2.1.2=py311_cpu
