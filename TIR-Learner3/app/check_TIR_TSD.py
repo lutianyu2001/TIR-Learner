@@ -115,7 +115,7 @@ def _is_TSD(TSD_dffset: Dict[str, int], l: int) -> bool:
 def _check_TIR(x: pd.Series) -> Union[int, float]:
     TIR_MIN_LEN = 10
 
-    family = x[0]  # Use index since the column name for TIR superfamily may differ
+    family = x.iloc[0]  # Use index since the column name for TIR superfamily may differ
     s = x["seq"][200:-200]
     len_s = len(s)
 
@@ -135,7 +135,7 @@ def _check_TIR(x: pd.Series) -> Union[int, float]:
 
 
 def _check_TSD(x: pd.Series) -> Union[int, float]:
-    family = x[0]  # Use index since the column name for TIR superfamily may differ
+    family = x.iloc[0]  # Use index since the column name for TIR superfamily may differ
     s = x["seq"]
     l = TSD[family]
 
