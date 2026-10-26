@@ -102,6 +102,7 @@ Clone the repository and install all the dependencies. `TIR-Learner.py` is the e
 - GRF (Generic Repeat Finder)
 - Required Python packages:
   - biopython
+  - dask >=2023.4
   - keras >=3.3.3
   - pandas
   - pytorch

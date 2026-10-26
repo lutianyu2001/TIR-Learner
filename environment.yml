@@ -9,6 +9,7 @@ dependencies:
   - bioconda::genericrepeatfinder=1.0.2=h4ac6f70_0
   - bioconda::genometools-genometools=1.6.5=py311h396876e_3
   - conda-forge::biopython=1.83=py311h459d7ec_0
+  - conda-forge::dask>=2023.4
   - conda-forge::keras=3.3.3=pyhd8ed1ab_0
   - conda-forge::multiprocess=0.70.16=py311h459d7ec_0
   - conda-forge::pandas=2.2.2=py311h14de704_1
